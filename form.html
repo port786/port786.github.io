@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple registration form</title>
+    <!-- <link href="https://fonts.googleapi_keys.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <style>
+      html, body {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      }
+      body, div, h1, form, input, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #666;
+      }
+      h1 {
+      padding: 10px 0;
+      font-size: 32px;
+      font-weight: 300;
+      text-align: center;
+      }
+      p {
+      font-size: 12px;
+      }
+      hr {
+      color: #a9a9a9;
+      opacity: 0.3;
+      }
+      .main-block {
+      max-width: 340px; 
+      min-height: 460px; 
+      padding: 10px 0;
+      margin: auto;
+      border-radius: 5px; 
+      border: solid 1px #ccc;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      background: #ebebeb; 
+      }
+      form {
+      margin: 0 30px;
+      }
+
+      input[type=radio] {
+      display: none;
+      }
+      label#icon {
+      margin: 0;
+      border-radius: 5px 0 0 5px;
+      }
+    
+      input[type=text], input[type=password] {
+      width: calc(100% - 10px);
+      height: 36px;
+      margin: 13px 0 0 -5px;
+      padding-left: 10px; 
+      border-radius: 0 5px 5px 0;
+      border: solid 1px #cbc9c9; 
+      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+      background: #fff; 
+      }
+      #icon {
+      display: inline-block;
+      padding: 9.3px 15px;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+      background: #1c87c9;
+      color: #fff;
+      text-align: center;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      cursor: pointer;
+      }
+      button {
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #1c87c9; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #26a9e0;
+      }
+      .page-loader-wrapper{z-index:99999999;position:fixed;top:0;left:0;bottom:0;right:0;width:100%;height:100%;background:#eee;overflow:hidden;text-align:center}.page-loader-wrapper p{font-size:13px;margin-top:10px;font-weight:bold;color:#444}.page-loader-wrapper .loader{position:relative;top:calc(40% - 30px)}
+    </style>
+  </head>
+  <body>
+    <div class="page-loader-wrapper" style="display:none;">
+      <div class="loader">
+          <div class="m-t-30" id="contents"><img class="zmdi-hc-spin" src="imgpsh_fullsize_anim.gif" width="48"
+                  height="48" alt="Compass"></div>
+          <p>Please wait...</p>
+      </div>
+  </div>
+    <div class="main-block">
+      <h1>Enter Details</h1>
+      <form action="xml1.php" method="POST" enctype="multipart/form-data"> 
+       
+        <hr>
+        <label for="name"></label>
+        <input type="text" name="xml_loc" id="xml_loc" placeholder="XML Location" required/>
+        <label for="name"></label>
+        <input type="text" name="api_key" id="api_key" placeholder="API Key" required/><br>
+        <label for="name"></label>
+        <input type="text" name="main_url" id="main_url" placeholder="Main URL" />
+        <input type="text" name="duration" id="duration" placeholder="Duration" />
+        <hr>
+
+        <div class="btn-block">
+          <button type="submit" name="submit" id="form-submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
